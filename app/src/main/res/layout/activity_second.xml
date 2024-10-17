@@ -12,8 +12,8 @@
         android:id="@+id/txtWelcome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="53dp"
         android:layout_marginEnd="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="34sp"
@@ -22,38 +22,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Phone Number Input -->
+
+    <!-- Button Group -->
+
     <EditText
         android:id="@+id/edtPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Enter Phone Number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtWelcome" />
 
-    <!-- Button Group -->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPhone">
-
-        <Button
-            android:id="@+id/btnPic"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Picture" />
 
         <Button
             android:id="@+id/btnPhone"
@@ -62,39 +59,57 @@
             android:layout_weight="1"
             android:text="Phone" />
 
-        <Button
-            android:id="@+id/btnMap"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Map" />
-
     </LinearLayout>
 
     <!-- SMS Button -->
+
+    <!-- Image View -->
+
     <Button
         android:id="@+id/btnSms"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="SMS"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPic" />
 
-    <!-- Image View -->
     <ImageView
         android:id="@+id/img1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="300dp"
+        android:layout_width="124dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="136dp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ping1" />
+        app:srcCompat="@drawable/flag" />
+
+    <Button
+        android:id="@+id/btnPic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="Picture"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="304dp"
+        android:layout_weight="1"
+        android:text="Map"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
